@@ -1,6 +1,7 @@
 "use client";
 
 import { Bot, Cloud, Shield, Zap } from "lucide-react";
+import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { gsap, registerGsap } from "@/lib/gsap";
 import { GlassCard } from "./ui/GlassCard";
@@ -187,6 +188,59 @@ export function About() {
                   </GlassCard>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative border-t border-white/5 px-6 py-32">
+        <div className="container-max">
+          <div className="grid items-center gap-16 lg:grid-cols-2">
+            <div>
+              <div className="mb-5 inline-flex rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-medium uppercase tracking-[0.25em] text-white/70 backdrop-blur-xl">
+                Meet The Founder
+              </div>
+
+              <h2 className="font-display text-4xl font-black leading-tight text-white md:text-6xl">
+                Built By A Developer.
+                <span className="block gradient-text">
+                  Focused On Business Growth.
+                </span>
+              </h2>
+
+              <p className="mt-8 text-lg leading-relaxed text-white/60">
+                Hi, I'm Arteja Grier, Founder of Cyber Vixen Studios. I help businesses build powerful digital experiences through custom websites, mobile applications, SEO optimization, cloud technologies, automation, and ongoing website management.
+              </p>
+
+              <p className="mt-6 text-lg leading-relaxed text-white/60">
+                My goal is simple: help businesses establish credibility online, attract more customers, and create digital systems that continue working long after launch.
+              </p>
+
+              <div className="mt-10 flex flex-wrap gap-4">
+                <div className="rounded-2xl border border-cyan-500/30 bg-cyan-500/10 px-5 py-3 text-cyan-300">
+                  Cloud Engineering
+                </div>
+                <div className="rounded-2xl border border-pink-500/30 bg-pink-500/10 px-5 py-3 text-pink-300">
+                  Website Development
+                </div>
+                <div className="rounded-2xl border border-purple-500/30 bg-purple-500/10 px-5 py-3 text-purple-300">
+                  Mobile Apps
+                </div>
+                <div className="rounded-2xl border border-green-500/30 bg-green-500/10 px-5 py-3 text-green-300">
+                  SEO Growth
+                </div>
+              </div>
+            </div>
+
+            <div className="min-h-[700px] overflow-hidden rounded-[40px] border border-white/10 bg-white/5 backdrop-blur-xl">
+              <Image
+                src="/images/arteja-grier-cyber-vixen-studios.png"
+                alt="Arteja Grier - Founder of Cyber Vixen Studios"
+                width={900}
+                height={1100}
+                priority
+                className="h-[700px] w-full object-cover"
+              />
             </div>
           </div>
         </div>

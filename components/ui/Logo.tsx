@@ -12,14 +12,14 @@ export function Logo({
   return (
     <div className={`group flex items-center gap-3 ${className}`}>
       <Image
-        src="/images/cv-logo.png"
+        src="/images/cv-logo-vixen.png"
         alt=""
         width={96}
         height={96}
         aria-hidden="true"
         priority
-        sizes="(min-width: 768px) 48px, 42px"
-        className="h-[42px] w-[42px] shrink-0 rounded-xl object-contain shadow-[0_8px_22px_-14px_rgba(17,17,17,0.45)] transition-transform duration-300 ease-out group-hover:scale-105 md:h-12 md:w-12"
+        sizes="(min-width: 768px) 48px, 40px"
+        className="h-10 w-10 shrink-0 rounded-xl object-contain shadow-[0_8px_22px_-14px_rgba(17,17,17,0.45)] transition-transform duration-300 ease-out group-hover:scale-105 md:h-12 md:w-12"
       />
       <span className={`font-display text-sm font-semibold tracking-tight md:text-[15px] ${textColor}`}>
         Cyber Vixen Studios

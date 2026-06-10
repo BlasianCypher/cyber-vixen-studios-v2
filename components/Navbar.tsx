@@ -13,6 +13,7 @@ const navLinks = [
   { label: "Websites", href: "/websites" },
   { label: "Apps", href: "/#apps" },
   { label: "SEO", href: "/seo" },
+  { label: "Pricing", href: "/#pricing" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
@@ -76,7 +77,7 @@ export function Navbar() {
           </ul>
 
           <div className="hidden lg:block">
-            <CalendlyButton className="btn-gradient h-10 px-5 text-[13px]">
+            <CalendlyButton className="rounded-2xl bg-gradient-to-r from-purple-600 via-fuchsia-500 to-pink-500 px-6 py-3 font-semibold text-white shadow-lg shadow-purple-500/25 transition-all duration-300 hover:scale-105 hover:shadow-purple-500/40">
               Book Consultation
             </CalendlyButton>
           </div>
@@ -138,7 +139,7 @@ export function Navbar() {
 
               <div className="mt-auto pt-8">
                 <CalendlyButton
-                  className="btn-gradient flex w-full justify-center"
+                  className="flex w-full justify-center rounded-2xl bg-gradient-to-r from-purple-600 via-fuchsia-500 to-pink-500 px-6 py-3 font-semibold text-white shadow-lg shadow-purple-500/25 transition-all duration-300 hover:scale-105 hover:shadow-purple-500/40"
                   onClick={() => setMobileOpen(false)}
                 >
                   Book Consultation

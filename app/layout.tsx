@@ -10,12 +10,10 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: {
-    default: "Cyber Vixen Studios | Websites, Apps & SEO",
-    template: "%s | Cyber Vixen Studios",
-  },
+  metadataBase: new URL("https://cybervixenstudios.com"),
+  title: "Cyber Vixen Studios",
   description:
-    "Clean, modern websites, apps, SEO foundations, and digital growth systems for businesses that want to look trustworthy and grow online.",
+    "Websites, Mobile Apps, SEO, Advertising, Cloud Solutions & Vixen Care",
   keywords: [
     "web development",
     "app development",
@@ -28,26 +26,26 @@ export const metadata: Metadata = {
   authors: [{ name: "Cyber Vixen Studios" }],
   creator: "Cyber Vixen Studios",
   openGraph: {
-    type: "website",
-    locale: "en_US",
-    siteName: "Cyber Vixen Studios",
-    title: "Cyber Vixen Studios | Websites, Apps & SEO",
+    title: "Cyber Vixen Studios",
     description:
-      "Clean websites, apps, SEO foundations, and digital growth systems for modern businesses.",
+      "Websites, Mobile Apps, SEO, Advertising, Cloud Solutions & Vixen Care",
+    siteName: "Cyber Vixen Studios",
+    type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Cyber Vixen Studios",
     description:
-      "Clean websites, apps, SEO foundations, and digital growth systems.",
+      "Websites, Mobile Apps, SEO, Advertising, Cloud Solutions & Vixen Care",
   },
   robots: {
     index: true,
     follow: true,
   },
   icons: {
-    icon: "/images/cv-logo.png",
-    apple: "/images/cv-logo.png",
+    icon: "/images/cv-logo-vixen.png",
+    shortcut: "/images/cv-logo-vixen.png",
+    apple: "/images/cv-logo-vixen.png",
   },
 };
 

@@ -209,7 +209,7 @@ export function About() {
               </h2>
 
               <p className="mt-8 text-lg leading-relaxed text-white/60">
-                Hi, I'm Arteja Grier, Founder of Cyber Vixen Studios. I help businesses build powerful digital experiences through custom websites, mobile applications, SEO optimization, cloud technologies, automation, and ongoing website management.
+                Hi, I&apos;m Arteja Grier, Founder of Cyber Vixen Studios. I help businesses build powerful digital experiences through custom websites, mobile applications, SEO optimization, cloud technologies, automation, and ongoing website management.
               </p>
 
               <p className="mt-6 text-lg leading-relaxed text-white/60">

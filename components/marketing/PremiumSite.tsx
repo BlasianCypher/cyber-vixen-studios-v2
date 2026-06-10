@@ -22,7 +22,6 @@ import {
   Sparkles,
   Target,
   Workflow,
-  Zap,
 } from "lucide-react";
 import { CalendlyButton } from "@/components/booking/CalendlyBooking";
 import { useSafeFadeUp } from "@/lib/useSafeFadeUp";

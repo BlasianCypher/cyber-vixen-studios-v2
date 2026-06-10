@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
+import { createContext, useCallback, useContext, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { CheckCircle2, X } from "lucide-react";
 import {
@@ -38,13 +38,9 @@ function trackConsultationBooked(event: EventScheduledEvent) {
 }
 
 export function CalendlyBookingProvider({ children }: { children: React.ReactNode }) {
-  const [rootElement, setRootElement] = useState<HTMLElement | null>(null);
   const [bookingOpen, setBookingOpen] = useState(false);
   const [successOpen, setSuccessOpen] = useState(false);
-
-  useEffect(() => {
-    setRootElement(document.body);
-  }, []);
+  const rootElement = typeof document === "undefined" ? null : document.body;
 
   useCalendlyEventListener({
     onEventScheduled: (event) => {

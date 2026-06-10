@@ -4,7 +4,47 @@ import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import Image from "next/image";
 import { useRef } from "react";
+
+const timelineSteps = [
+  {
+    number: "01",
+    title: "Discovery",
+    text: "Learn about your business, goals, and audience.",
+    top: true,
+  },
+  {
+    number: "02",
+    title: "Strategy",
+    text: "Create a roadmap focused on growth and results.",
+    top: false,
+  },
+  {
+    number: "03",
+    title: "Design",
+    text: "Craft a modern and user-focused experience.",
+    top: true,
+  },
+  {
+    number: "04",
+    title: "Development",
+    text: "Build websites, apps, and automations.",
+    top: false,
+  },
+  {
+    number: "05",
+    title: "Launch",
+    text: "Deploy, optimize, and go live.",
+    top: true,
+  },
+  {
+    number: "06",
+    title: "Vixen Care",
+    text: "Manage, maintain, and continuously improve.",
+    top: false,
+  },
+];
 
 export default function Home() {
   const row1Ref = useRef<HTMLDivElement>(null);
@@ -245,21 +285,14 @@ export default function Home() {
                 <div className="absolute left-0 right-0 top-28 h-1 rounded-full bg-gradient-to-r from-cyan-500 via-purple-500 via-pink-500 to-green-500" />
 
                 <div className="grid grid-cols-6 gap-4">
-                  {[
-                    ["01", "Discovery", "Learn about your business, goals, and audience.", true],
-                    ["02", "Strategy", "Create a roadmap focused on growth and results.", false],
-                    ["03", "Design", "Craft a modern and user-focused experience.", true],
-                    ["04", "Development", "Build websites, apps, and automations.", false],
-                    ["05", "Launch", "Deploy, optimize, and go live.", true],
-                    ["06", "Vixen Care", "Manage, maintain, and continuously improve.", false],
-                  ].map(([number, title, text, top]) => (
-                    <div key={number} className="relative flex flex-col items-center text-center">
-                      {top ? (
+                  {timelineSteps.map((step) => (
+                    <div key={step.number} className="relative flex flex-col items-center text-center">
+                      {step.top ? (
                         <>
                           <div className="mb-4 rounded-3xl border border-white/10 bg-white/5 p-4 backdrop-blur-xl">
-                            <div className="text-3xl font-black text-white">{number}</div>
-                            <h3 className="mt-2 text-lg font-semibold">{title}</h3>
-                            <p className="mt-2 text-xs leading-relaxed text-gray-400">{text}</p>
+                            <div className="text-3xl font-black text-white">{step.number}</div>
+                            <h3 className="mt-2 text-lg font-semibold">{step.title}</h3>
+                            <p className="mt-2 text-xs leading-relaxed text-gray-400">{step.text}</p>
                           </div>
 
                           <div className="h-10 w-px bg-gradient-to-b from-cyan-400 to-transparent" />
@@ -273,9 +306,9 @@ export default function Home() {
                           <div className="h-10 w-px bg-gradient-to-b from-transparent to-purple-400" />
 
                           <div className="mt-4 rounded-3xl border border-white/10 bg-white/5 p-4 backdrop-blur-xl">
-                            <div className="text-3xl font-black text-white">{number}</div>
-                            <h3 className="mt-2 text-lg font-semibold">{title}</h3>
-                            <p className="mt-2 text-xs leading-relaxed text-gray-400">{text}</p>
+                            <div className="text-3xl font-black text-white">{step.number}</div>
+                            <h3 className="mt-2 text-lg font-semibold">{step.title}</h3>
+                            <p className="mt-2 text-xs leading-relaxed text-gray-400">{step.text}</p>
                           </div>
                         </>
                       )}
@@ -288,21 +321,14 @@ export default function Home() {
                 <div className="relative">
                   <div className="absolute left-1/2 top-0 bottom-0 w-px -translate-x-1/2 bg-gradient-to-b from-cyan-500 via-purple-500 via-pink-500 to-green-500" />
 
-                  {[
-                    ["01", "Discovery", "Learn about your business, goals, and audience.", true],
-                    ["02", "Strategy", "Create a roadmap focused on growth and results.", false],
-                    ["03", "Design", "Craft a modern and user-focused experience.", true],
-                    ["04", "Development", "Build websites, apps, and automations.", false],
-                    ["05", "Launch", "Deploy, optimize, and go live.", true],
-                    ["06", "Vixen Care", "Manage, maintain, and continuously improve.", false],
-                  ].map(([number, title, text, left]) => (
-                    <div key={number} className="relative mb-12 flex items-center">
-                      {left ? (
+                  {timelineSteps.map((step) => (
+                    <div key={step.number} className="relative mb-12 flex items-center">
+                      {step.top ? (
                         <>
                           <div className="w-[45%] rounded-3xl border border-white/10 bg-white/5 p-4 backdrop-blur-xl text-right">
-                            <div className="text-3xl font-black text-white">{number}</div>
-                            <h3 className="mt-2 text-lg font-semibold text-white">{title}</h3>
-                            <p className="mt-2 text-xs leading-relaxed text-gray-400">{text}</p>
+                            <div className="text-3xl font-black text-white">{step.number}</div>
+                            <h3 className="mt-2 text-lg font-semibold text-white">{step.title}</h3>
+                            <p className="mt-2 text-xs leading-relaxed text-gray-400">{step.text}</p>
                           </div>
 
                           <div className="relative z-10 mx-auto flex h-6 w-6 items-center justify-center rounded-full border-4 border-cyan-400 bg-black shadow-[0_0_20px_rgba(34,211,238,.6)]" />
@@ -316,9 +342,9 @@ export default function Home() {
                           <div className="relative z-10 mx-auto flex h-6 w-6 items-center justify-center rounded-full border-4 border-purple-400 bg-black shadow-[0_0_20px_rgba(168,85,247,.6)]" />
 
                           <div className="w-[45%] rounded-3xl border border-white/10 bg-white/5 p-4 backdrop-blur-xl text-left">
-                            <div className="text-3xl font-black text-white">{number}</div>
-                            <h3 className="mt-2 text-lg font-semibold text-white">{title}</h3>
-                            <p className="mt-2 text-xs leading-relaxed text-gray-400">{text}</p>
+                            <div className="text-3xl font-black text-white">{step.number}</div>
+                            <h3 className="mt-2 text-lg font-semibold text-white">{step.title}</h3>
+                            <p className="mt-2 text-xs leading-relaxed text-gray-400">{step.text}</p>
                           </div>
                         </>
                       )}
@@ -353,9 +379,11 @@ export default function Home() {
                 Launching your website is only the beginning. Vixen Care provides ongoing management, updates, optimization, and support so your business can focus on growth while we handle the technology.
               </p>
               <div className="mx-auto mt-14 mb-16 max-w-6xl overflow-hidden rounded-[40px] border border-white/10 bg-white/5 backdrop-blur-xl">
-                <img
+                <Image
                   src="/images/vixen-care.png"
                   alt="Vixen Care"
+                  width={1200}
+                  height={800}
                   className="h-auto w-full object-cover"
                 />
               </div>
@@ -439,7 +467,7 @@ export default function Home() {
               </h2>
 
               <p className="mx-auto mt-6 max-w-3xl text-lg text-gray-600">
-                Whether you're launching your first website, scaling your business, building an app, or looking for ongoing management, Cyber Vixen Studios has a solution designed around your goals.
+                Whether you&apos;re launching your first website, scaling your business, building an app, or looking for ongoing management, Cyber Vixen Studios has a solution designed around your goals.
               </p>
             </div>
 
@@ -528,7 +556,7 @@ export default function Home() {
             <div className="mt-20 rounded-[40px] border border-white/60 bg-white/70 p-12 text-center backdrop-blur-2xl">
               <h3 className="text-4xl font-black text-gray-950">Need Something Custom?</h3>
               <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-600">
-                Every business is unique. Book a consultation and we'll create a custom solution tailored to your goals.
+                Every business is unique. Book a consultation and we&apos;ll create a custom solution tailored to your goals.
               </p>
               <button className="mt-8 rounded-2xl bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 px-10 py-4 font-semibold text-white">
                 Schedule Consultation
@@ -558,7 +586,7 @@ export default function Home() {
               </h2>
 
               <p className="mt-8 text-lg leading-relaxed text-gray-300">
-                Hi, I'm Arteja Grier, Founder of Cyber Vixen Studios. I help businesses build powerful digital experiences through custom websites, mobile applications, SEO optimization, automation, and ongoing website management.
+                Hi, I&apos;m Arteja Grier, Founder of Cyber Vixen Studios. I help businesses build powerful digital experiences through custom websites, mobile applications, SEO optimization, automation, and ongoing website management.
               </p>
 
               <p className="mt-6 text-lg leading-relaxed text-gray-300">
@@ -583,9 +611,11 @@ export default function Home() {
 
             <div className="relative">
               <div className="overflow-hidden rounded-[40px] border border-white/10 bg-white/5 backdrop-blur-xl">
-                <img
+                <Image
                   src="/images/arteja-grier-cyber-vixen-studios.png"
                   alt="Arteja Grier - Founder of Cyber Vixen Studios"
+                  width={900}
+                  height={1100}
                   className="h-full w-full object-cover"
                 />
               </div>

@@ -65,37 +65,37 @@ export default function Home() {
     <>
       <Navbar />
       <main className="min-h-screen bg-white text-black overflow-hidden">
-        <section className="relative flex min-h-[650px] items-center px-6 py-16">
+        <section className="relative flex min-h-[650px] items-center px-5 py-10 md:px-6 md:py-16">
           <div className="absolute inset-0 bg-white">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(236,72,153,0.08),transparent_30%),radial-gradient(circle_at_top_right,rgba(6,182,212,0.08),transparent_30%),radial-gradient(circle_at_bottom,rgba(168,85,247,0.08),transparent_35%)]" />
           </div>
 
-          <div className="relative z-10 mx-auto grid max-w-7xl gap-10 lg:grid-cols-2 lg:items-center">
+          <div className="relative z-10 mx-auto grid max-w-7xl grid-cols-1 gap-10 text-center lg:grid-cols-2 lg:items-center lg:text-left">
             <div>
-              <div className="mb-6 inline-flex rounded-full border border-gray-200 bg-white px-4 py-2 text-sm backdrop-blur">
+              <div className="mx-auto mb-6 inline-flex w-full max-w-fit rounded-full border border-gray-200 bg-white px-4 py-2 text-center text-xs backdrop-blur sm:text-sm lg:mx-0">
                 Digital Growth Partner For Modern Businesses
               </div>
 
               <div className="mb-4">
-                <h2 className="text-xl font-semibold text-gray-900 md:text-2xl">
+                <h2 className="text-lg font-semibold text-gray-900 sm:text-xl md:text-2xl">
                   We Build, Manage & Grow Your Online Presence.
                 </h2>
 
-                <p className="mt-3 text-base text-gray-600 md:text-lg">
+                <p className="mt-3 text-center text-sm leading-relaxed text-gray-600 sm:text-base md:text-left md:text-lg">
                   Custom Websites • Mobile Apps • SEO Optimization • Google Ads • Website Management
                 </p>
               </div>
 
-              <h1 className="mb-6 text-4xl font-extrabold leading-tight tracking-tight text-gray-950 md:text-6xl">
+              <h1 className="mb-6 text-4xl font-extrabold leading-tight tracking-tight text-gray-950 sm:text-5xl md:text-6xl">
                 Your Website Should Be Working As Hard As You Do.
               </h1>
 
-              <div className="flex flex-wrap gap-4">
-                <button className="rounded-2xl bg-gradient-to-r from-pink-500 via-fuchsia-500 to-purple-600 px-8 py-4 font-semibold text-white shadow-xl shadow-pink-500/20 transition hover:scale-105">
+              <div className="flex w-full flex-col gap-4 sm:w-auto sm:flex-row">
+                <button className="w-full rounded-2xl bg-gradient-to-r from-pink-500 via-fuchsia-500 to-purple-600 px-8 py-4 font-semibold text-white shadow-xl shadow-pink-500/20 transition hover:scale-105 sm:w-auto">
                   Start Your Project
                 </button>
 
-                <button className="rounded-2xl border border-gray-200 bg-white px-8 py-4 font-semibold text-gray-900 transition hover:bg-gray-100">
+                <button className="w-full rounded-2xl border border-gray-200 bg-white px-8 py-4 font-semibold text-gray-900 transition hover:bg-gray-100 sm:w-auto">
                   View Services
                 </button>
               </div>
@@ -121,7 +121,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="relative">
+            <div className="relative w-full">
               <div className="rounded-[28px] border border-gray-200 bg-white p-6 shadow-xl shadow-gray-200">
                 <h3 className="mb-4 text-xl font-bold text-gray-900">Growth Dashboard</h3>
 
@@ -142,7 +142,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="absolute -bottom-4 -left-4 rounded-3xl border border-gray-200 bg-white p-4 shadow-lg">
+              <div className="mt-4 rounded-3xl border border-gray-200 bg-white p-4 shadow-lg sm:absolute sm:-bottom-4 sm:-left-4 sm:mt-0">
                 <p className="text-sm text-gray-500">Managed Websites</p>
                 <h4 className="text-3xl font-bold text-gray-900">24/7</h4>
                 <p className="text-sm text-green-600">Vixen Care Active</p>
